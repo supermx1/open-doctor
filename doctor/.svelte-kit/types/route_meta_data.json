@@ -1,0 +1,33 @@
+{
+	"/(main)": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/appointment/[id]": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/appointment/[id]/edit-medical-record": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/appointment/[id]/new-medical-record": [
+		"src/routes/+layout.js"
+	],
+	"/(auth)/login": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/notification": [
+		"src/routes/+layout.js"
+	],
+	"/(auth)/request": [
+		"src/routes/+layout.js"
+	],
+	"/(auth)/reset": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/settings": [
+		"src/routes/+layout.js"
+	]
+}

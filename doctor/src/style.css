@@ -1,0 +1,144 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap');
+
+
+* {
+    font-family: 'Satoshi', sans-serif;
+}
+
+/*body {*/
+/*    touch-action: none !important;*/
+/*}*/
+
+.bg-blue {
+    background-color: #0081c2 !important;
+}
+
+.bg-red {
+    background-color: #DA334DFF !important;
+}
+
+.swipe-handler {
+    height: 16px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    /*background: #fff;*/
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swipe-handler:after {
+    content: "";
+    width: 36px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -18px;
+    margin-top: -3px;
+    border-radius: 3px;
+    background: #666;
+}
+
+input, select {
+    @apply bg-zinc-50 border-gray-400 px-4 my-1 inline-flex !important;
+    @apply border-solid border rounded-md !important;
+    @apply h-14 w-full !important;
+}
+
+textarea {
+    @apply border-gray-400 px-4 my-1 ring-2 ring-transparent ring-offset-1 !important;
+    @apply border-solid border rounded-md !important;
+    @apply w-full !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    @apply border-primary-600  ring-1 ring-primary-200 ring-offset-1 !important;
+    @apply outline-none !important;
+}
+
+[type='checkbox']:checked, [type='radio']:checked {
+    @apply bg-primary-600 !important;
+}
+
+
+.toggle input[type='checkbox'] {
+    display: none !important;
+}
+
+.left .back {
+    @apply text-red-600 !important;
+}
+
+.item-after {
+    @apply capitalize !important;
+}
+
+.toolbar.tabbar {
+    @apply bg-white !important;
+}
+
+.toolbar-inner .tab-link {
+    @apply overflow-visible relative z-[9999] !important;
+}
+
+.toolbar-inner {
+    @apply overflow-visible !important;
+}
+
+.tabbar .tab-link-active, .tabbar-icons .tab-link-active {
+    @apply text-primary-600 !important;
+}
+
+.main-icon {
+
+    @apply bg-primary-600 border border-primary-600 outline-[0.7rem] outline outline-primary-600 -outline-offset-1 !important;
+}
+
+.toolbar-bottom:before {
+    @apply bg-transparent !important;
+}
+
+.custom-navbar .navbar-bg {
+    @apply bg-transparent !important;
+}
+
+.custom-navbar .navbar-bg::after {
+    @apply bg-transparent !important;
+}
+
+.radio-label {
+    @apply flex gap-2 pt-4 px-4 w-full bg-white border border-gray-300 rounded-2xl text-sm min-h-20 max-h-32 ;
+}
+
+.radio-label:hover {
+    @apply bg-gray-100 ;
+}
+
+.radio-label:focus{
+    @apply border-primary-500 ring-blue-500;
+}
+
+
+.pin-input {
+    @apply block border border-solid border-gray-300 bg-gray-50 py-3 px-4 w-full rounded-md !important;
+}
+
+.pin-input:focus {
+    @apply border-primary-600 !important;
+}
+
+.pin input {
+    background-color: white !important;
+}
+
+[data-pincode] {
+    border: none !important;
+    display: block !important;
+}
+
+
+.k-tabbar-link-active {
+    @apply text-primary-600 !important;
+}

@@ -1,0 +1,1 @@
+pm2 start ./pocketbase --name "pocketbase" -- serve

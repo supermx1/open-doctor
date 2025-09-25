@@ -1,0 +1,31 @@
+
+**/node_modules
+./doctor/.svelte-kit
+
+
+
+
+# Output
+./patients/.output
+./patients/.vercel
+./patients/.svelte-kit
+./patients/build
+./patients/www
+
+# OS
+./patients/.DS_Store
+./patients/Thumbs.db
+
+# Env
+./patients/.env
+./patients/.env.*
+!.env.example
+!.env.test
+
+# Vite
+./patients/vite.config.js.timestamp-*
+./patients/vite.config.ts.timestamp-*
+./patients/test-results/
+./patients/playwright-report/
+./patients/blob-report/
+./patients/playwright/.cache/

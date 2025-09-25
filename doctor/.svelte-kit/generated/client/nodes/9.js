@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/(main)/appointment/[id]/new-medical-record/+page.svelte";
