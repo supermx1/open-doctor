@@ -4,7 +4,7 @@
     "pwa",
     "capacitor"
   ],
-  "name": "Sandsclinic",
+  "name": "Open Doctor",
   "framework": "svelte",
   "template": "tabs",
   "bundler": "vite",
@@ -16,7 +16,7 @@
     "iconFonts": false
   },
   "customBuild": false,
-  "pkg": "io.techgfxlimited.sandsclinic",
+  "pkg": "io.techgfxlimited.opendoctor",
   "capacitor": {
     "platforms": [
       "ios",

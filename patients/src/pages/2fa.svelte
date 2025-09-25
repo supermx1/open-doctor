@@ -24,7 +24,7 @@
 
     async function logout() {
         await client.logout();
-        sessionStorage.removeItem('sandsclinic');
+        sessionStorage.removeItem('opendoctor');
         $USER = null;
     }
 

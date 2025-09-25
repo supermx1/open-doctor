@@ -5,17 +5,18 @@
     import { passwordRequest } from '@directus/sdk';
     import {client} from "@/js/directus";
     import { USER } from "@/js/store/user";
+    import { site } from "@/js/store/site";
 
 
 
     let loading = false;
     let disabled = false;
-    let email = "emekatoby@gmail.com";
+    let email = "";
 
     async function requestResetPassword() {
         loading = true;
         try {
-            const c = await client.request(passwordRequest(email, 'http://localhost:5173/reset'));
+            const c = await client.request(passwordRequest(email, `${window.location.origin}/reset`));
             console.log(c);
             f7.toast.create({
                 text: "Password reset link sent to your email",
@@ -39,7 +40,7 @@
 </script>
 
 <svelte:head>
-    <title>Sandsclinic - Forgot Password</title>
+    <title>{$site.title} - Forgot Password</title>
 </svelte:head>
 
 <Page name="auth">
@@ -51,7 +52,7 @@
     >
         <Block class="w-full">
             <p class="mb-12 flex items-center text-white font-bold text-lg">
-                <img src="/img/logo.png" class="w-7" alt="logo"/>Sandsclinic
+                <img src="/img/logo.png" class="w-7" alt="logo"/>{$site.title}
             </p>
             <h1 class="text-3xl font-bold text-white mb-2">Reset Password</h1>
             <p class="text-sm text-white">Forgot your password? You can reset it.</p>

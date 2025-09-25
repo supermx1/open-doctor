@@ -2,19 +2,20 @@ import {createDirectus, rest, graphql, authentication, readItems, realtime, upda
 import {f7} from "framework7-svelte";
 import {PATIENT_DATA} from "@/js/store/user";
 import {PLANS} from "@/js/store/plan";
+import { PUBLIC_API_URL } from "../../../config"
 
 class SessionStorage {
   get() {
-    return JSON.parse(sessionStorage.getItem("sandsclinic"));
+    return JSON.parse(sessionStorage.getItem("opendoctor"));
   }
   set(data) {
-    sessionStorage.setItem("sandsclinic", JSON.stringify(data));
+    sessionStorage.setItem("opendoctor", JSON.stringify(data));
   }
 }
 
 const storage = new SessionStorage();
 
-export const client = createDirectus('https://sandsclinic.91.99.84.16.nip.io')
+export const client = createDirectus(PUBLIC_API_URL)
     // .with(authentication('cookie', {
     //     credentials: 'include',
     //     storage: storage }))

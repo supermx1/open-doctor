@@ -12,6 +12,7 @@
     import {onMount} from "svelte";
     import {Pincode, PincodeInput} from "svelte-pincode";
     import {requestPermission} from "@/js/firebase";
+    import { site } from "@/js/store/site";
 
 
     let showPassword = true;
@@ -122,10 +123,10 @@
     >
         <Block class="w-full">
             <p class="mb-12 flex items-center text-white font-bold text-lg">
-                <img src="/img/logo.png" class="w-7" alt="logo"/>Sandsclinic
+                <img src="/img/logo.png" class="w-7" alt="logo"/>{$site?.title}
             </p>
             <h1 class="text-3xl font-bold text-white mb-2">Login</h1>
-            <p class="text-sm text-white">Welcome back, login to the Sandsclinic app to get started.</p>
+            <p class="text-sm text-white">Welcome back, login to the {$site?.title} app to get started.</p>
         </Block>
     </div>
 

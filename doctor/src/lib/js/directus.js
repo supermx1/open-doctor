@@ -18,16 +18,16 @@ import { goto } from '$app/navigation';
 
 class SessionStorage {
   get() {
-    return JSON.parse(sessionStorage.getItem("sandsclinic"));
+    return JSON.parse(sessionStorage.getItem("opendoctor"));
   }
   set(data) {
-    sessionStorage.setItem("sandsclinic", JSON.stringify(data));
+    sessionStorage.setItem("opendoctor", JSON.stringify(data));
   }
 }
 
 const storage = new SessionStorage();
 
-export const client = createDirectus('https://sandsclinic.91.99.84.16.nip.io')
+export const client = createDirectus('https://opendoctor.91.99.84.16.nip.io')
     .with(authentication('json',{ storage: storage }))
     .with(rest())
     .with(realtime());
@@ -124,7 +124,7 @@ export async function getNotifications() {
 
 export async function logout() {
   await client.logout();
-  sessionStorage.removeItem('sandsclinic');
+  sessionStorage.removeItem('opendoctor');
   USER.set(null);
   await goto('/login');
 }

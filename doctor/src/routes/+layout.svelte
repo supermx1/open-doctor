@@ -9,7 +9,7 @@
 	import { onMount } from 'svelte';
 	import { client } from '$lib/js/directus.js';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import {useOverscrollHandler} from '$lib/js/utils2.js';
 
@@ -18,7 +18,7 @@
 	async function refreshUser() {
 		try {
 			$USER = await client.refresh();
-			await goto($page.url.pathname || '/');
+			await goto(page.url.pathname || '/');
 		} catch (error) {
 			$USER = null;
 			await goto('/login');
@@ -65,7 +65,7 @@
 
 </script>
 
-<App theme="ios">
+<App theme="ios" class="md:!max-w-md md:!mx-auto">
 
 	{#if $USER === undefined}
 		<LoadingPage/>

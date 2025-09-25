@@ -1,6 +1,6 @@
 {
-  "appId": "io.techgfxlimited.sandsclinic",
-  "appName": "Sandsclinic",
+  "appId": "io.techgfxlimited.opendoctor",
+  "appName": "Open Doctor",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

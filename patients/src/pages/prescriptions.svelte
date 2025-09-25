@@ -19,6 +19,7 @@
     import Loading from "@/components/Loading.svelte";
     import {quintOut} from "svelte/easing";
     import NavBar from "@/components/NavBar.svelte";
+    import { site } from "@/js/store/site"
 
     let loading = true;
     let loadingSearch = false;
@@ -192,10 +193,10 @@
             <Block>
                 {#if prescription.date_created}
                     <div class="flex item-center justify-end text-lg font-bold mb-3 m-auto">
-                        <p class="flex"><img src="/img/logo.png" class="w-7" alt="logo"/>Sandsclinic</p>
+                        <p class="flex"><img src="/img/logo.png" class="w-7" alt="logo"/>{$site.title}</p>
                     </div>
                     <p class="font-bold text-blue-600">ID: {prescription.id}</p>
-                    <p>Prescription by: <b>Sandsclinic</b></p>
+                    <p>Prescription by: <b>{$site.title}</b></p>
                     <p>Issued on: <b>{formatDateDay(prescription.date_created)}</b></p>
                     {#if prescription.start_date}<p>Start of Prescription:
                         <b>{formatDateDay(prescription.start_date)}</b></p>{/if}

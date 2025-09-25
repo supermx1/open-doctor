@@ -76,3 +76,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@media (min-width: 768px) {
+    body {
+        @apply bg-gray-400 !important;
+    }
+}

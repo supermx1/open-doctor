@@ -1,10 +1,11 @@
 import {f7} from "framework7-svelte";
+import {PUBLIC_API_URL} from "../../../config";
 
 
 export async function payWithPayStack(id, plan){
 
     try {
-        const response = await fetch('https://sandsclinic.techgfxlimited.com/flows/trigger/a4aa27ba-bf10-49cf-8579-9c4cc469230f', {
+        const response = await fetch(`${PUBLIC_API_URL}/flows/trigger/a4aa27ba-bf10-49cf-8579-9c4cc469230f`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +30,7 @@ export async function payWithPayStack(id, plan){
 export async function payWithStripe(id, plan){
 
     try {
-        const response = await fetch('https://sandsclinic.techgfxlimited.com/flows/trigger/9b42f3e7-74ce-404c-b928-11ffcb768b44', {
+        const response = await fetch(`${PUBLIC_API_URL}/flows/trigger/9b42f3e7-74ce-404c-b928-11ffcb768b44`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

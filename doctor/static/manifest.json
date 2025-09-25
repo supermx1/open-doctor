@@ -1,7 +1,7 @@
 {
-  "name": "Sandsclinic Doctor",
-  "short_name": "SC Doctor",
-  "description": "A doctor's app for Sandsclinic",
+  "name": "Open Doctor",
+  "short_name": "Open Doctor",
+  "description": "A doctor's app for Open Doctor",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
@@ -50,7 +50,7 @@
     {
       "src": "/icons/256x256.png",
       "sizes": "256x256",
-      "type": "image/png",  "scope": "doctor-sandsclinic.pages.dev"
+      "type": "image/png",  "scope": "doctor-opendoctor.pages.dev"
     }
   ],
   "id": "techgfxhealthapp",

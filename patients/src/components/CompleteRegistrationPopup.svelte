@@ -1,5 +1,6 @@
 <script>
     import {Block, BlockTitle, f7, Link, Page, Popup} from "framework7-svelte";
+    import { site } from "@/js/store/site"
 
     export let f7router;
     export let f7route;
@@ -19,7 +20,7 @@
         <div slot="fixed" class="swipe-handler" />
         <img src="/img/complete-reg.webp" alt="Complete Registration" class="w-full h-96 object-cover"/>
         <Block class="text-center space-y-6">
-            <h1 class="text-3xl font-medium">Thank you for registering with Sandsclinic 🎉</h1>
+            <h1 class="text-3xl font-medium">Thank you for registering with {$site.title} 🎉</h1>
             <p class="text-lg">
                To complete your registration, please click the button below to fill out other relevant information.
             </p>

@@ -1,6 +1,6 @@
 {
-  "name": "Sandsclinic",
-  "short_name": "Sandsclinic",
+  "name": "Open Doctor",
+  "short_name": "Open Doctor",
   "description": "A telemedicine application",
   "lang": "en-US",
   "start_url": "/",
@@ -41,7 +41,7 @@
   ],
   "id": "techgfxhealthapp",
   "dir": "ltr",
-  "scope": "sandsclinic.pages.dev",
+  "scope": "patients-opendoctor.pages.dev",
   "orientation": "portrait",
   "display_override": [
     "fullscreen",

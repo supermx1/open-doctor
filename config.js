@@ -1,0 +1,1 @@
+export const PUBLIC_API_URL = "https://sandsclinic.91.99.84.16.nip.io"

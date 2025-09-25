@@ -4,6 +4,8 @@
     import Loading from "@/components/Loading.svelte";
     import {client} from "@/js/directus";
     import { registerUser } from "@directus/sdk";
+    import {PUBLIC_API_URL} from "../../../config";
+    import { site } from "@/js/store/site"
 
 
     let showPassword = true;
@@ -23,7 +25,7 @@
                 {
                     first_name: firstName,
                     last_name: lastName,
-                    verification_url: "https://sandsclinic.techgfxlimited.com/verify"
+                    verification_url: `${PUBLIC_API_URL}/verify`
                 }
             ));
             f7.notification.create({
@@ -51,7 +53,7 @@
 </script>
 
 <svelte:head>
-    <title>Sandsclinic - Create an account</title>
+    <title>{$site?.title} - Create an account</title>
 </svelte:head>
 
 <Page name="auth">
@@ -64,10 +66,10 @@
     >
         <Block class="w-full">
             <p class="mb-12 flex items-center text-white font-bold text-lg">
-                <img src="/img/logo.png" class="w-7" alt="logo"/>Sandsclinic
+                <img src="/img/logo.png" class="w-7" alt="logo"/>{$site?.title}
             </p>
             <h1 class="text-3xl font-bold text-white mb-2">Create Account</h1>
-            <p class="text-sm text-white">Create an account to have access to all Sandsclinic features.</p>
+            <p class="text-sm text-white">Create an account to have access to all {$site?.title} features.</p>
         </Block>
     </div>
     <Block>

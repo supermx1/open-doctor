@@ -5,6 +5,7 @@
     import { passwordReset } from '@directus/sdk';
     import {client} from "@/js/directus";
     import { utils } from "framework7/lite-bundle";
+    import { site } from "@/js/store/site";
 
     const { token } = utils.parseUrlQuery(window.location.href);
     console.log('Query:', token);
@@ -46,7 +47,7 @@
 </script>
 
 <svelte:head>
-    <title>Sandsclinic - Forgot Password</title>
+    <title>{$site.title} - Forgot Password</title>
 </svelte:head>
 
 <Page name="auth">
@@ -58,7 +59,7 @@
     >
         <Block class="w-full">
             <p class="mb-12 flex items-center text-white font-bold text-lg">
-                <img src="/img/logo.png" class="w-7" alt="logo"/>Sandsclinic
+                <img src="/img/logo.png" class="w-7" alt="logo"/>{$site.title}
             </p>
             <h1 class="text-3xl font-bold text-white mb-2">Reset Password</h1>
             <p class="text-sm text-white">Forgot your password? You can reset it.</p>

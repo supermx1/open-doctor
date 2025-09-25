@@ -21,11 +21,12 @@
   import CompleteRegistrationPopup from "@/components/CompleteRegistrationPopup.svelte";
   import {requestPermission} from "@/js/firebase";
   import "driver.js/dist/driver.css";
+  import { site } from "@/js/store/site";
 
   const device = getDevice();
   // Framework7 Parameters
   let f7params = {
-    name: 'Sandsclinic', // App name
+    name: 'Open Doctor', // App name
     theme: 'ios', // Automatic theme detection
     // App routes
     routes: routes,
@@ -78,8 +79,11 @@
 
 </script>
 
-<App { ...f7params }>
+<svelte:head>
+   <title>{$site.title}</title>
+</svelte:head>
 
+<App { ...f7params } class="md:!max-w-md md:!mx-auto">
   {#if $USER}
     <!-- Views/Tabs container -->
     <Views tabs class="safe-areas">
@@ -121,8 +125,4 @@
     {:else}
     <View class="safe-areas" url="/login" />
   {/if}
-
-
-
-
 </App>
