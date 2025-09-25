@@ -10,6 +10,9 @@
 	export let transitionConfig: $$Props["transitionConfig"] = {
 		duration: 200,
 	};
+	// declare rest props so the spread is valid in TS
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	export let $$restProps: Record<string, any>;
 
 	export { className as class };
 </script>
