@@ -17,7 +17,7 @@
     let showPassword = true;
     let loading = false;
     let disabled = false;
-    let email = "johndoe@gmail.com";
+    let email = "";
     let password = "";
     let otpPage = false;
 
