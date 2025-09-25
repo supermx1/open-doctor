@@ -16,7 +16,7 @@
 
 </script>
 <Page name="Settings">
-    <NavBar />
+<!--    <NavBar />-->
     <Block>
         <div class="flex items-center justify-between">
             <div>

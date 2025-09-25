@@ -148,7 +148,7 @@
             <div class="grid grid-cols-2 gap-2">
                 <div class="col-span-2">
                     <label for="date" class="text-sm mb-2">Appointment Date</label>
-                    <input bind:value={date} min={new Date().toISOString().substring(0, 10)} type="date" id="date" class="!bg-white placeholder:text-base"
+                    <input bind:value={date} min={new Date().toISOString().substring(0, 10)} type="date" id="date" class="!bg-white placeholder:text-base !w-full"
                            required/>
                 </div>
                 <div class="col-span-2">
