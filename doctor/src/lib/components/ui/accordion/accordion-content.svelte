@@ -12,7 +12,7 @@
 	};
 	// declare rest props so the spread is valid in TS
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	export let $$restProps: Record<string, any>;
+export let restProps: Record<string, any> = {};
 
 	export { className as class };
 </script>
@@ -21,7 +21,7 @@
 	class={cn("overflow-hidden text-sm", className)}
 	{transition}
 	{transitionConfig}
-	{...$$restProps}
+{...restProps}
 >
 	<div class="pb-4 pt-0">
 		<slot />

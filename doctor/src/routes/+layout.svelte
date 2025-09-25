@@ -9,7 +9,7 @@
 	import { onMount } from 'svelte';
 	import { client } from '$lib/js/directus.js';
 	import { goto } from '$app/navigation';
-	import { page } from '$app/state';
+import { page } from '$app/stores';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import {useOverscrollHandler} from '$lib/js/utils2.js';
 

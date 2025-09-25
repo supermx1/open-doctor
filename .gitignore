@@ -2,13 +2,13 @@
 **/node_modules
 ./doctor/.svelte-kit
 
-
+**/build
 
 
 # Output
 ./patients/.output
 ./patients/.vercel
-./patients/.svelte-kit
+**/.svelte-kit
 ./patients/build
 ./patients/www
 
